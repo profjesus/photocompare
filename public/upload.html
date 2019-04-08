@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Upload photos</title>
+</head>
+<body>
+  <h1>Upload Form</h1>
+  <form name="upload-form" action="upload" method="post" enctype="multipart/form-data">
+    <label for="original">Original photo:</label>
+    <input type="file" name="original" id="original">
+    <br>
+    <label for="edited">Edited photo:</label>
+    <input type="file" name="edited" id="edited">
+    <br>
+    <button type="submit">Send</button>
+  </form>
+  <br/>
+  <br/>
+  <a href="/">Go Back</a>
+</body>
+</html>
