@@ -9,14 +9,18 @@
 </head>
 <body>
   <h1>Upload Form</h1>
-  <form name="upload-form" action="upload" method="post" enctype="multipart/form-data">
-    <label for="original">Original photo:</label>
-    <input type="file" name="original" id="original">
-    <br>
-    <label for="edited">Edited photo:</label>
-    <input type="file" name="edited" id="edited">
-    <br>
-    <button type="submit">Send</button>
+  <form name="upload-photo" action="upload" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="name">Your name:</label>
+      <input type="text" class="form-control" name="name" id="name" placeholder="Write your name">
+    </div>
+    <div class="form-group">
+        <label for="original">Original photo:</label>
+        <input type="file" class="form-control-file" name="original" id="original">
+        <label for="edited">Edited photo:</label>
+        <input type="file" class="form-control-file" name="edited" id="edited">
+    </div>
+    <button type="submit" class="btn btn-primary">Send</button>
   </form>
   <br/>
   <br/>
