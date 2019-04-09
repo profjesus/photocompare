@@ -27,6 +27,12 @@ app.get('/', function (req, res) {
   res.send('Hello World!');
 });
 
+app.get('/users', function (req, res) {
+  fs.readdir('./public/photos', function(err, folders) {
+    res.send(folders);
+  });
+});
+
 app.post('/upload', [upload.fields([{ name: 'original' }, { name: 'edited' }])], function (req, res, next) {
   res.send('Ok!');
 });
