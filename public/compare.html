@@ -8,7 +8,7 @@
 </head>
 <body>
   <div class="container">
-    <div class="row">
+    <div class="row align-items-center">
       <div class="col">
         <form>
           <div class="form-group">
@@ -18,7 +18,7 @@
           </div>
         </form>
       </div>
-      <div class="col">Tempo:</div>
+      <div id="crono" class="col display-4 text-center">0</div>
     </div>
 
     <div id="images" class="container" style="display: none">
@@ -27,7 +27,7 @@
         <div id="imageright" class="col-sm-6"></div>
       </div>
       <div class="row justify-content-center">
-        Botón non sei
+        <!--Botón non sei-->
       </div>
     </div>
   </div>
@@ -42,7 +42,7 @@
         </div>
         <div class="modal-body" id="resultModalBody"></div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" id="resultModalClose">Close</button>
         </div>
       </div>
     </div>
