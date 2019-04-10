@@ -15,7 +15,7 @@ var storage = multer.diskStorage(
         if (!fs.existsSync(dir)){
           fs.mkdirSync(dir);
         }
-        var filename = file.fieldname + file.originalname.slice(file.originalname.lastIndexOf('.'));
+        var filename = file.fieldname; // + file.originalname.slice(file.originalname.lastIndexOf('.'));
         cb(null, path.join(req.body.name, filename));
       }
   }

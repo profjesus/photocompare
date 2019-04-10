@@ -1,3 +1,6 @@
+# Uploaded photos folder
+public/photos
+
 # Logs
 logs
 *.log
