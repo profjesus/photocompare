@@ -23,18 +23,23 @@ var storage = multer.diskStorage(
 
 var upload = multer( { storage: storage } );
 
-app.get('/', function (req, res) {
-  res.send('Hello World!');
-});
-
 app.get('/users', function (req, res) {
   fs.readdir('./public/photos', function(err, folders) {
     res.send(folders);
   });
 });
 
-app.post('/upload', [upload.fields([{ name: 'original' }, { name: 'edited' }])], function (req, res, next) {
-  res.send('Ok!');
+var fileFields = [{ name: 'original1' }, { name: 'edited1' }, { name: 'original2' }, { name: 'edited2' }];
+app.post('/upload', [upload.fields(fileFields)], function (req, res, next) {
+  // create text files
+  var folder = path.join("public/photos/", req.body.name);
+  fs.writeFile(path.join(folder, "1.txt"), req.body.comments1, (err) => {
+    if (err) console.log(err);
+    fs.writeFile(path.join(folder, "2.txt"), req.body.comments2, (err) => {
+      if (err) console.log(err);
+      res.send('Ok!');
+    });
+  });
 });
 
 app.listen(8080, function () {

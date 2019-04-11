@@ -8,22 +8,42 @@
   <title>Upload photos</title>
 </head>
 <body>
-  <h1>Upload Form</h1>
-  <form name="upload-photo" action="upload" method="post" enctype="multipart/form-data">
-    <div class="form-group">
-      <label for="name">Your name:</label>
-      <input type="text" class="form-control" name="name" id="name" placeholder="Write your name">
-    </div>
-    <div class="form-group">
-        <label for="original">Original photo:</label>
-        <input type="file" class="form-control-file" name="original" id="original">
-        <label for="edited">Edited photo:</label>
-        <input type="file" class="form-control-file" name="edited" id="edited">
-    </div>
-    <button type="submit" class="btn btn-primary">Send</button>
-  </form>
-  <br/>
-  <br/>
-  <a href="/">Go Back</a>
+  <div class="container">
+    <h1>Upload Form</h1>
+    <form name="upload-photo" action="upload" method="post" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="name">Your name:</label>
+        <input type="text" class="form-control" name="name" id="name" placeholder="Write your name">
+      </div>
+      <div class="row">
+        <div class="col">
+          Improved photo
+          <div class="form-group">
+              <label for="original1">Original photo:</label>
+              <input type="file" class="form-control-file" name="original1" id="original1">
+              <label for="edited1">Edited photo:</label>
+              <input type="file" class="form-control-file" name="edited1" id="edited1">
+              <label for="comments1">Comments:</label>
+              <textarea class="form-control" id="comments1" name="comments1" rows="3"></textarea>      
+          </div>
+        </div>
+        <div class="col">
+          Manipulated photo
+          <div class="form-group">
+              <label for="original2">Original photo:</label>
+              <input type="file" class="form-control-file" name="original2" id="original2">
+              <label for="edited2">Edited photo:</label>
+              <input type="file" class="form-control-file" name="edited2" id="edited2">
+              <label for="comments2">Comments:</label>
+              <textarea class="form-control" id="comments2" name="comments2" rows="3"></textarea>      
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Upload</button>
+    </form>
+    <br/>
+    <br/>
+    <a href="/">Go Back</a>
+  </div>
 </body>
 </html>
