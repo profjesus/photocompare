@@ -5,45 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <title>Upload photos</title>
+  <title>Subir imaxes</title>
 </head>
 <body>
   <div class="container">
-    <h1>Upload Form</h1>
+    <h1>Formulario de subida</h1>
     <form name="upload-photo" action="upload" method="post" enctype="multipart/form-data">
       <div class="form-group">
-        <label for="name">Your name:</label>
-        <input type="text" class="form-control" name="name" id="name" placeholder="Write your name">
+        <label for="name">O teu nome:</label>
+        <input type="text" class="form-control" name="name" id="name" placeholder="Escribe o teu nome">
       </div>
       <div class="row">
         <div class="col">
-          Improved photo
+          <h3>Foto mellorada</h3>
+          A foto editada ten que ser unha versión mellorada da orixinal. Debe verse unha clara diferencia entre a foto orixinal e a editada
+          <br><br>
           <div class="form-group">
-              <label for="original1">Original photo:</label>
+              <label for="original1">Imaxe orixinal:</label>
               <input type="file" class="form-control-file" name="original1" id="original1">
-              <label for="edited1">Edited photo:</label>
+              <label for="edited1">Imaxe editada:</label>
               <input type="file" class="form-control-file" name="edited1" id="edited1">
-              <label for="comments1">Comments:</label>
+              <label for="comments1">Comentarios (explica que fixeches):</label>
               <textarea class="form-control" id="comments1" name="comments1" rows="3"></textarea>      
           </div>
         </div>
         <div class="col">
-          Manipulated photo
+          <h3>Foto creativa</h3>
+          A foto editada ten que ser unha reinterpretación da orixinal, con elementos diferentes. Debe ser difícil detectar a foto falsa.
+          <br><br>
           <div class="form-group">
-              <label for="original2">Original photo:</label>
+              <label for="original2">Imaxe orixinal:</label>
               <input type="file" class="form-control-file" name="original2" id="original2">
-              <label for="edited2">Edited photo:</label>
+              <label for="edited2">Imaxe editada:</label>
               <input type="file" class="form-control-file" name="edited2" id="edited2">
-              <label for="comments2">Comments:</label>
+              <label for="comments2">Comentarios (explica que fixeches):</label>
               <textarea class="form-control" id="comments2" name="comments2" rows="3"></textarea>      
           </div>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary">Upload</button>
+      <button type="submit" class="btn btn-primary">Enviar imaxes</button>
     </form>
     <br/>
     <br/>
-    <a href="/">Go Back</a>
+    <a href="/">Volver á páxina principal</a>
   </div>
 </body>
 </html>
