@@ -17,7 +17,7 @@ function getUsers() {
                 $("#user").append('<option value="' + data[i] + '">' + data[i] + '</option>');
             }
         } else {
-            $("#user").append('<option value="">No users</option>');
+            $("#user").append('<option value="">Non hai usuarios</option>');
         }
     });
 }
@@ -39,13 +39,13 @@ function getImagesForUser(user) {
         $("#imageright").html(htmlOriginalImg);
     }
     $('#original').click(function() {
-        $('#resultModalLabel').html("Oooops!");
-        $('#resultModalBody').html("You chose poorly");
+        $('#resultModalLabel').html("Vaia!");
+        $('#resultModalBody').html("Escolliches a imaxe orixinal, non a editada");
         clearInterval(tInterval); // Stop timer
     });
     $('#edited').click(function() {
-        $('#resultModalLabel').html("Great!");
-        $('#resultModalBody').html("That was indeed the edited image. It took you <strong>" + seconds + "</strong> seconds to find out");
+        $('#resultModalLabel').html("Xenial!");
+        $('#resultModalBody').html("Esa era a imaxe editada. Levoute <strong>" + seconds + "</strong> segundos descubrila");
         clearInterval(tInterval); // Stop timer
     });
     $("#images").show();
